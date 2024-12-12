@@ -220,5 +220,4 @@ order_total = sum(item["Price"] * int(item["Quantity"]) for item in order_list)
 # and print the prices.
 line_length = len("$--------------------------|--------|----------") - len(str(order_total))
 item_spaces = " " * (len("--------------------------") - len("Total"))
-print(f"Total{item_spaces}|")
-print(f"${order_total:.2f}                                        ")
+print(f"Total{item_spaces}|${order_total:.2f}")
