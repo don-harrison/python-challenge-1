@@ -1,35 +1,111 @@
-Order System (54 points)
-An order list is initialized. (2 points)
+### Crazy Cravings Catering Order System
 
-User is prompted for their menu item selection and it's saved as a variable menu_selection. (4 points)
+Welcome to **Crazy Cravings Catering**! This is a Python-based script for managing customer orders from a diverse menu, complete with snacks, meals, drinks, and desserts.
 
-User input menu_selection is checked as a number and an error is printed if it is not. (4 points)
+---
 
-menu_selection is converted to an integer. (2 points)
+#### **Features**
+- Interactive menu selection by category.
+- Dynamic pricing and multi-level menu handling.
+- Quantity input with default fallback.
+- Comprehensive order summary and receipt generation.
 
-An if-else statement is used to check if menu_selection is in the menu_items keys, and an error is printed if it isn't. (4 points)
+---
 
-The item name of the customer's selection is extracted from the menu_items dictionary and stored as a variable. (4 points)
+#### **Menu Categories**
+1. **Snacks**
+   - Cookie: $0.99
+   - Banana: $0.69
+   - Apple: $0.49
+   - Granola bar: $1.99
 
-The customer is prompted for a quantity of their item selection and the value defaults to 1 if the customer does not input a valid number. (10 points)
+2. **Meals**
+   - Burrito: $4.49
+   - Teriyaki Chicken: $9.99
+   - Sushi: $7.49
+   - Pad Thai: $6.99
+   - **Pizza**
+     - Cheese: $8.99
+     - Pepperoni: $10.99
+     - Vegetarian: $9.99
+   - **Burger**
+     - Chicken: $7.49
+     - Beef: $8.49
 
-The customer's selected item, price, and quantity are appended to the order list in dictionary format. (10 points)
+3. **Drinks**
+   - **Soda**
+     - Small: $1.99
+     - Medium: $2.49
+     - Large: $2.99
+   - **Tea**
+     - Green: $2.49
+     - Thai Iced: $3.99
+     - Irish Breakfast: $2.49
+   - **Coffee**
+     - Espresso: $2.99
+     - Flat White: $2.99
+     - Iced: $3.49
 
-A match-case statement is used to check if the customer would like to keep ordering, and performs the correct actions for y, n, and default cases. (10 points)
+4. **Desserts**
+   - Chocolate Lava Cake: $10.99
+   - **Cheesecake**
+     - New York: $4.99
+     - Strawberry: $6.49
+   - Australian Pavlova: $9.99
+   - Rice Pudding: $4.99
+   - Fried Banana: $4.49
 
-The match-case statement converts the use input to lowercase or uppercase before checking the case. (4 points)
+---
 
-Order Receipt (46 points)
-A for loop is used to loop through the order list. (10 points)
+#### **Usage Instructions**
+1. **Launch the script**
+   - Run the script in a Python environment (Python 3.10+ is required).
 
-The value of each key in each order dictionary is saved as a variable. (6 points)
+2. **Select a Menu Category**
+   - Choose a category (e.g., Snacks, Meals, Drinks, or Desserts).
 
-The number of formatting spaces are correctly calculated. (6 points)
+3. **Pick an Item**
+   - Select an item from the displayed menu.
 
-Space strings are created using string multiplication. (4 points)
+4. **Set Quantity**
+   - Input the quantity of the selected item (default is 1 if invalid).
 
-The customer's order is printed with the item name, price, and quantity. (6 points)
+5. **Review Your Order**
+   - Continue adding items or finalize your order.
 
-List comprehension is used to calculate the total price of the order. (10 points)
+6. **View Receipt**
+   - A detailed receipt will be displayed, showing all items, their prices, quantities, and the total amount.
 
-The total price of the order is printed to the screen. (4 points)
+---
+
+#### **Code Highlights**
+- **Order Validation**: Ensures correct input types and handles errors gracefully.
+- **Dynamic Pricing**: Supports nested menu structures with different price tiers.
+- **Readable Formatting**: Neatly formatted receipt for user clarity.
+- **Scalable**: Designed to easily accommodate additional menu items or categories.
+
+---
+
+#### **Prerequisites**
+- Python 3.10+
+
+---
+
+#### **Example Output**
+```
+Welcome to Crazy Cravings Catering.
+From which menu would you like to order?
+1: Snacks
+2: Meals
+3: Drinks
+4: Desserts
+...
+Item name                 | Price  | Quantity
+--------------------------|--------|----------
+Pizza - Pepperoni         | $10.99 | 2
+Soda - Large              | $2.99  | 1
+...
+Total                     | $24.97
+```
+
+---
